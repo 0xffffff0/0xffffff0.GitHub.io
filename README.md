@@ -4,6 +4,10 @@
 # **0-days Vulnerabilities in XNU IOKIT** 
 >AppleARMSMP
 
+Before we get started, these vulnerabilities theoretically work on the latest version of XNU ـxnu-8792.61.2ـ
+
+
+
 **Lack of error handling for calls to `IOService::waitForMatchingService, IOService::getProperty, IOService::registerInterrupt, and IOService::enableInterrupt`**.
 
 *Description:* These functions can fail for various reasons, such as if the device or interrupt being looked up or registered does not exist, or if there is a problem with the arguments being passed. If the code does not check the return values of these functions and handle any errors that occur, it could lead to unexpected behavior or crashes.

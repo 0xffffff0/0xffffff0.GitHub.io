@@ -39,7 +39,8 @@ if (!is_legitimate_handler_function(ipi_handler)) {
 
 **Use of global variables that can be modified by an attacker.**
 
-*Description:* The code uses global variables that are initialized at runtime, including `gCPUIC,` `gPMGR,` `gAIC,` and `topology_info.` If an attacker can modify the values of these variables, they could potentially cause the system to behave in unexpected ways or crash.
+*Description:* The code uses global variables that are initialized at runtime, including `gCPUIC,` `gPMGR,` `gAIC,` and `topology_info.` 
+If an attacker can modify the values of these variables, they could potentially cause the system to behave in unexpected ways or crash.
 
 *Impact:* An attacker could potentially modify the values of these variables to cause the system to behave in unexpected ways, potentially leading to a denial of service or other vulnerabilities.
 
